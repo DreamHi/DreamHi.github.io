@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "新博客开通"
+categories: update
+---
+
+new blog
