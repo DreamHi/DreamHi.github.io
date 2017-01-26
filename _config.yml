@@ -1,12 +1,11 @@
 # Site settings
 title: HiDream Team
+SEOTitle: "梦 创 技术 团队"
 email: hidream_tech@163.com
-description: > # this means to ignore newlines until "baseurl:"
-              Write an awesome description for your new site here. You can edit this
-              line in _config.yml. It will appear in your document head meta (for
-              Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+description: "打造nb的团队,nb的产品"
+keyword: "前端 后端 ios iOS Android android 测试 运维 产品"
+baseurl: ""
+url: "www.hidream.tech"
 
 # Layout settings
 header_type: default  # values [ drawer, default ]
@@ -16,6 +15,8 @@ pagination_type: default  # values [ ops, default ]
 # Build settings
 highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
 
 excerpt : teaser
 paginate : 9
