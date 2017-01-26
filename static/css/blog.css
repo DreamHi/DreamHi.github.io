@@ -1,15 +1,35 @@
 .blog-wall {
-  margin:30px;
+  margin:20px 30px 20px 30px;
+  width:400px;
+  float:left;
+  height:250px;
 }
 
 .user-info {
   color: #999;
-  line-height: 34px;
+  line-height: 24px;
   overflow: hidden;
-  margin-top: 8px;
+  font-size: 12px;
 }
 
 .user-info .info-text {
- float: left;
+  float: left;
   display: inline-block;
+  padding-right: 20px;
+}
+
+.tags {
+  margin-top: 5px;
+}
+
+.tags .label-item {
+  float: left;
+  text-align: center;
+  display: inline-block;
+  padding: 2px 10px 2px 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #9b4dca;
+  color: white;
 }
