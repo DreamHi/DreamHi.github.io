@@ -2,7 +2,8 @@
   margin:20px 30px 20px 30px;
   width:400px;
   float:left;
-  height:250px;
+  height:260px;
+  border-bottom: 1px solid #eee;
 }
 
 .user-info {
@@ -20,6 +21,7 @@
 
 .tags {
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .tags .label-item {
