@@ -1,0 +1,15 @@
+.blog-wall {
+  margin:30px;
+}
+
+.user-info {
+  color: #999;
+  line-height: 34px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.user-info .info-text {
+ float: left;
+  display: inline-block;
+}

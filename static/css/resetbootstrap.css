@@ -11,6 +11,11 @@ p {
   min-height: 57px;
 }
 
+.navbar-nav {
+  display: flex;
+  float: none;
+}
+
 .navbar-default {
   margin-bottom: 0px;
   background-color: #fff;
@@ -23,4 +28,12 @@ p {
 
 .panel-default {
   border-color: #fff;
+}
+
+
+.justify-content-center {
+  -webkit-box-pack: center!important;
+  -webkit-justify-content: center!important;
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
 }
