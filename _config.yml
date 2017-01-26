@@ -14,4 +14,16 @@ post_type: highlight    # values [ highlight, default ]
 pagination_type: default  # values [ ops, default ]
 
 # Build settings
+highlighter: rouge
 markdown: kramdown
+
+excerpt : teaser
+paginate : 9
+paginate_path : ":num"
+
+comments :
+  provider : duoshuo
+  duoshuo :
+    short_name : hidream
+
+baidu_analyze： d9da9bb820e87945d7717a17c257a67d
