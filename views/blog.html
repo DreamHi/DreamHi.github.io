@@ -10,7 +10,7 @@ title: {{ site.description }}
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
       <p class="user-info">
         <span class="info-text">作者: {{ post.auth | default: "匿名" }}</span>
-        <span class="info-text">日期: {{post.date | date_to_xmlschema}}</span>
+        <span class="info-text">日期: {{post.date | date: "%Y年%-d月%m日"}}</span>
       </p>
       <p style="font-size: 16px;"> {{ post.excerpt | truncate: 150}} </p>
       <p class="tags">
