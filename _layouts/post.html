@@ -3,25 +3,48 @@ layout: default
 ---
 {% include /blog_nav.html %}
 
-<div>
-  <article>
-    <header>
-      <h2>{{ page.title }}</h2>
-      <p>{{ page.date | date: "%Y年%-d月%m日" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-    </header>
+<!-- Post Content -->
+<article>
+  <div class="container">
+		<div class="row">
+			<header>
+				<h2>{{ page.title }}</h2>
+				<p>{{ page.date | date: "%Y年%-d月%m日" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+			</header>
+		</div>
+    <div class="row">
+        <div class="col-lg-8 col-md-8">
+            <section>
+                {{ content }}
+            </section>
+            <footer>
+                {% if page.previous %}
+                <a href="{{ page.previous.url }}" class="float-left">&larr; Previous post</a> {% endif %}
+                {% if page.next %}
+                <a href="{{ page.next.url }}" class="float-right">Next post &rarr;</a> {% endif %}
+            </footer>
 
-    <section>
-      {{ content }}
-    </section>
+					<!-- 多说评论框 start -->
+					<div id="comments">
+						<div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+					</div>
+					<!-- 多说评论框 end -->
+        </div>
+        <div class="col-lg-4  col-md-4">
+					{% if page.catalog %}
+					<div class="side-catalog fixed">
+						<ul class="catalog-body"></ul>
+					</div>
+					<script src="/static/js/toc.js"></script>
+					<script type="text/javascript">
+              $(document).ready(function() {
+                  $(".catalog-body").toc();
+              });
+					</script>
+					{% endif %}
+        </div>
+    </div>
+  </div>
+</article>
 
-    <footer>
-      {% if page.previous %}
-      <a href="{{ page.previous.url }}" class="float-left">&larr; Previous post</a> {% endif %}
-      {% if page.next %}
-      <a href="{{ page.next.url }}" class="float-right">Next post &rarr;</a> {% endif %}
-    </footer>
-
-  </article>
-
-</div>
 {% include /duoshuo.html %}

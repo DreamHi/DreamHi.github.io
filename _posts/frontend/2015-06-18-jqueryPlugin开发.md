@@ -2,6 +2,7 @@
 layout: post
 comments: jQuery Plugin 开发
 categories: javascript
+catalog: true
 ---
 
 ### 插件
