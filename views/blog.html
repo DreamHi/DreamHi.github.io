@@ -3,8 +3,8 @@ layout: default
 title: {{ site.description }}
 ---
 {% include /blog_nav.html %}
-<div class="row">
-  <div class="col-lg-12 col-md-12">
+<div class="container">
+  <div class="row">
     {% for post in site.posts %}
     <div class="blog-wall col-lg-3 col-md-3">
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>

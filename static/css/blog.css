@@ -1,8 +1,8 @@
 .blog-wall {
-  margin:20px 30px 20px 30px;
+  margin:10px;
   /*width:400px;*/
   float:left;
-  height:260px;
+  height:200px;
   border-bottom: 1px solid #eee;
 }
 
