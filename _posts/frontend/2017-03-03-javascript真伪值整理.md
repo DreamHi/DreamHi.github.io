@@ -21,3 +21,18 @@ catalog: true
 |undefined|	undefined|	false|
 |null	|null|	false|
 
+### underscore1.8.3的判定方法
+```js
+_.isEmpty({})   // true
+_.isEmpty(hoge) // false
+_.isEmpty("") // true
+_.isEmpty(1) // true
+_.isEmpty(-1) // true
+_.isEmpty(0) // true
+_.isEmpty([]) // true
+_.isEmpty(true) // true
+_.isEmpty(false) // true
+_.isEmpty(undefined) // true
+_.isEmpty(null) // true
+
+```
