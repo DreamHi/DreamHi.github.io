@@ -3,7 +3,7 @@ layout: post
 comments: RestAPI架构中Error体系设计
 categories: backend
 catalog: true
-tags: restapi error
+tags: REST API Error
 ---
 现在RestAPI盛行，我们在设计以提供RestAPI为主的架构中，除了API的URL设计，规范，返回结果格式等以外。
 异常/错误体系的设计也很有必要。
@@ -49,6 +49,7 @@ RestAPI结构设计中的错误分类，常用的有以下几种。
 根据服务不同，情况不同，此处省略
 
 ### 5.HTTP规范的错误code
+
 |Status Code|Constructor Name             |
 |-----------|-----------------------------|
 |400        |BadRequest                   |
@@ -99,32 +100,38 @@ RestAPI结构设计中的错误分类，常用的有以下几种。
 #### 客户端错误体系
 1. 发送一个非法的json.
 
-> TTP/1.1 400 Bad Request
-> Content-Length: 35
->
-> {"message":"Problems parsing JSON"}
+```javascript
+ TTP/1.1 400 Bad Request
+ Content-Length: 35
+ {"message":"Problems parsing JSON"}
+```
 
 2.发送的json中，值得类型不正确。
-> HTTP/1.1 400 Bad Request
-> Content-Length: 40
-> 
-> {"message":"Body should be a JSON object"}
+
+```javascript
+ HTTP/1.1 400 Bad Request
+ Content-Length: 40
+ {"message":"Body should be a JSON object"}
+```
+
 
 3.发送的json对象中，有非法的字段
->
-> HTTP/1.1 422 Unprocessable Entity
-> Content-Length: 149
-> 
-> {
->  "message": "Validation Failed",
->  "errors": [
->    {
->      "resource": "Issue",
->      "field": "title",
->      "code": "missing_field"
->    }
->  ]
-> }
+
+```javascript
+ HTTP/1.1 422 Unprocessable Entity
+ Content-Length: 149
+ 
+ {
+  "message": "Validation Failed",
+  "errors": [
+    {
+      "resource": "Issue",
+      "field": "title",
+      "code": "missing_field"
+    }
+  ]
+ }
+```
 
 每个错误对象中，都有资源属性和字段属性，便于客户分析错误原因。
 
