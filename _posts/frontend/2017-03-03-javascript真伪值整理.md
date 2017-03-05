@@ -5,9 +5,12 @@ categories: javascript
 catalog: true
 tags: JavaScript
 ---
-## 真伪值
 
-### JavaScript 真伪值
+JavaScript的真伪值判断，没有规律。只能死记硬背。
+而且第三方工具库的判断和语言本身也有区别。
+作为笔记，比较语言本身和underscore库的区别。
+
+## JavaScript 真伪值
 
 |值|类型|结果|
 |--------|------|------|
@@ -38,3 +41,5 @@ _.isEmpty(undefined) // true
 _.isEmpty(null) // true
 
 ```
+
+### lodash

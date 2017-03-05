@@ -17,11 +17,11 @@ layout: default
             <section class="markdown-body">
                 {{ content }}
             </section>
-            <footer>
+            <footer style="margin-top: 20px;">
                 {% if page.previous %}
-                <a href="{{ page.previous.url }}" class="float-left">&larr; Previous post</a> {% endif %}
+                <a href="{{ page.previous.url }}" class="pull-left">&larr; 上一篇</a> {% endif %}
                 {% if page.next %}
-                <a href="{{ page.next.url }}" class="float-right">Next post &rarr;</a> {% endif %}
+                <a href="{{ page.next.url }}" class="pull-right">下一篇 &rarr;</a> {% endif %}
             </footer>
 
 					<!-- 多说评论框 start -->

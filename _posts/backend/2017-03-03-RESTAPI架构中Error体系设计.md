@@ -6,7 +6,7 @@ catalog: true
 tags: REST API Error
 ---
 现在RestAPI盛行，我们在设计以提供RestAPI为主的架构中，除了API的URL设计，规范，返回结果格式等以外。
-异常/错误体系的设计也很有必要。
+异常/错误体系的设计也很重要。
 
 RestAPI结构设计中的错误分类，常用的有以下几种。
 1. 客户端参数或者请求的错误

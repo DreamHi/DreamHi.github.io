@@ -6,7 +6,7 @@ title: {{ site.description }}
 <div class="container">
   <div class="row">
     {% for post in site.posts %}
-    <div class="blog-wall col-lg-3 col-md-3">
+    <div class="blog-wall container">
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
       <p class="user-info">
         <span class="info-text">作者: {{ post.auth | default: "匿名" }}</span>

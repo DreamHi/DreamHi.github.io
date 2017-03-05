@@ -3,14 +3,13 @@ layout: post
 comments: jQuery Plugin 开发
 categories: javascript
 catalog: true
+tags: JavaScript JQuery 插件
 ---
-
-### 插件
 
 开发插件的目的是为了功能或者代码复用。一个或多个功能封装成插件。
 jquery插件类似jquery对象的一个方法。所有的juqery对象都可以使用
 
-### 常见插件用法(自命名)
+## 常见插件用法(自命名)
 
 * 直接型（示例对象插件）
 

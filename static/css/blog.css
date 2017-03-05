@@ -1,8 +1,5 @@
 .blog-wall {
-  margin:10px;
-  float:left;
-  height:250px;
-  border-bottom: 1px solid #eee;
+  width: 80%;
 }
 
 .user-info {
@@ -27,12 +24,15 @@
   float: left;
   text-align: center;
   display: inline-block;
-  padding: 2px 10px 2px 10px;
+  padding: 0px 5px 0px 5px;
   border: 1px solid #999;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 8px;
   background-color: #9b4dca;
   color: white;
+  font-size: 8px;
+  height: 22px;
+  text-decoration: none;
 }
 
 .side-catalog {
@@ -77,4 +77,3 @@
   padding-right: 5px;
   text-indent: 0;
 }
-
