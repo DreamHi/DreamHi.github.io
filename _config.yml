@@ -13,24 +13,25 @@ post_type: highlight    # values [ highlight, default ]
 pagination_type: default  # values [ ops, default ]
 
 # Build settings
-highlighter: rouge
 markdown: kramdown
+highlighter: rouge
 kramdown:
   input: GFM
   extensions:
     - autolink
     - footnotes
     - smart
-  use_coderay: true
+    - tables
+  enable_coderay: true
   syntax_highlighter: rouge
-  coderay:
+  syntax_highlighter_opts:
     coderay_line_numbers:  nil
 
 gems: [jekyll-paginate]
 
 excerpt : teaser
-paginate : 9
-paginate_path : ":num"
+paginate : 10
+paginate_path : "/views/blog/page:num/"
 
 comments :
   provider : duoshuo
