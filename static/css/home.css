@@ -17,6 +17,27 @@
     text-align: left;
 }
 
+.news .count {
+    margin-top: 50px;
+}
+
+.news .count img {
+    width: 40px;
+    height: 40px;
+}
+.news .count h2 {
+    margin: 0px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+.news .count h2 small {
+    font-size: 10px;
+}
+.news .count p {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
 .team {
     background: #f4f4f4;
     margin-top: 60px;
