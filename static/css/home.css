@@ -28,7 +28,7 @@
 .news .count h2 {
     margin: 0px;
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 30px;
 }
 .news .count h2 small {
     font-size: 10px;
@@ -37,7 +37,52 @@
     margin-top: 12px;
     font-weight: bold;
 }
+.news .notification {
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 0px;
+    max-height: 3000px;
+    overflow: auto;
+    text-align: left;
+}
 
+.news .notification ul {
+    height: 300px;
+    list-style: none;
+    text-align: left;
+    border-top: 1px solid #9b4dca;
+    padding-left: 0px;
+}
+.news .notification ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.news .notification ul li .col-md-2 {
+    width: 12%;
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+.news .notification ul li .col-md-2 img {
+    height: 45px;
+    width: 45px;
+    margin-top: 20px;
+}
+.news .notification ul li .col-md-10 {
+    padding: 0px;
+    margin-left: 10px;
+}
+.news .notification ul li .col-md-10 .name {
+    font-size: 16px;
+}
+.news .notification ul li .col-md-10 img {
+    margin-bottom: 2px;
+    height: 16px;
+    width: 16px;
+}
+.news .notification ul li .col-md-10 p span {
+    padding-right: 20px;
+}
 .team {
     background: #f4f4f4;
     margin-top: 60px;
