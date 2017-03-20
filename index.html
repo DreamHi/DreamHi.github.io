@@ -1,249 +1,120 @@
 ---
 layout: default
+title: {{ site.description }}
 ---
-<section class="home">
-  <div class="row">
-    <div class="container">
-      <div class="carousel slide" data-ride="carousel" id="teamTags"> 
-        <ol class="carousel-indicators"> 
-          <li data-target="#teamTags" data-slide-to="0" class="active"></li>
-          <li data-target="#teamTags" data-slide-to="1" class=""></li> 
-          <li data-target="#teamTags" data-slide-to="2" class=""></li> 
-        </ol> 
-        <div class="carousel-inner" role="listbox"> 
-          <div class="item active">
-              <h1>梦想</h1> 
-              <p>一个方向，一个目标，一旦被付诸行动，就会变得神圣.</p> 
-          </div> 
-          <div class="item"> 
-            <h1>激情</h1> 
-            <p>一团熊熊的火焰，一切行动的原动力.</p> 
-          </div> 
-          <div class="item"> 
-            <h1>分享</h1> 
-            <p>一种信念，一种态度，是我们存在的意义.</p> 
-          </div> 
-        </div> 
+<div class="home">
+  <div class="container">
+    <div class="carousel slide" data-ride="carousel" id="teamTags">
+      <ol class="carousel-indicators">
+        <li data-target="#teamTags" data-slide-to="0" class="active"></li>
+        <li data-target="#teamTags" data-slide-to="1" class=""></li>
+        <li data-target="#teamTags" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <h1>梦想</h1>
+          <p>一个方向，一个目标，一旦被付诸行动，就会变得神圣.</p>
+        </div>
+        <div class="item">
+          <h1>激情</h1>
+          <p>一团熊熊的火焰，一切行动的原动力.</p>
+        </div>
+        <div class="item">
+          <h1>分享</h1>
+          <p>一种信念，一种态度，是我们存在的意义.</p>
+        </div>
       </div>
     </div>
   </div>
-</section>
-<section class="container news">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1>最新动态</h1>
-          <p>知识越与人共享，它的价值越增加.</p>
+</div>
+{% include /blog_nav.html %}
+<div class="container">
+  <div class="row" style="margin-bottom: 30px;">
+    <div class="">
+      <div class="col-lg-9 col-md-9">
+        {% for post in paginator.posts %}
+        <div class="blog-wall container">
+          <h3>
+            {% if post.original %}
+            <span class="post-original">原</span>
+            {% else %}
+            <span class="post-recommend">转</span>
+            {% endif %}
+            <a style="color:black" href="{{ post.url }}">{{ post.title }}</a>
+          </h3>
+          <p class="info">
+            <span><img src="../static/images/createdAt.png" alt="">&nbsp;&nbsp;{{ post.auth | default: "匿名" }}</span>
+            <span><img src="../static/images/date.png" alt="">&nbsp;&nbsp;{{post.date | date: "%Y年%-m月%d日"}}</span>
+            <span><img src="../static/images/views.png" alt="">&nbsp;&nbsp;<i id="totalWords">0</i>字</span>
+            <span><img src="../static/images/views.png" alt="">&nbsp;&nbsp;<i id="totalViews">0</i></span>
+            <span><img src="../static/images/comment.png" alt="">&nbsp;&nbsp;<i id="totalComments">0</i></span>
+          </p>
+          <span class="content"> 
+            {{ post.excerpt | truncate: 150}} 
+          </span>
+          <p class="tags">
+            {% for tag in post.tags %}
+            <a href="#" class="label-item" target="_blank">{{ tag }}</a>
+            {% endfor %}
+          </p>
+          <div class="clearfix"></div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 text-center">
-            <div class="row count">
-                <img src="../static/images/app.png" alt="">
-                <h2>1<small>-APP数</small></h2>
-                <p>坚持创新，提供最小价值的产品</p>
+        {% endfor %}
+        <!-- Pagination links -->
+        <nav aria-label="..."> 
+          <ul class="pager"> 
+           {% if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path }}" class="previous">前一页</a></li>
+          {% endif %}
+          {% if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path }}" class="next">下一页</a></li>
+          {% endif %}
+          </ul> 
+        </nav>
+      </div>
+      <div class="col-lg-3 col-md-3" style="margin-top: 15px;">
+          <div class="panel panel-default">
+            <div class="panel-heading title">
+                近期文章
             </div>
-            <div class="row count">
-                <img src="../static/images/user.png" alt="">
-                <h2>100<small>-用户数</small></h2>
-                <p>用户的喜怒哀乐，是我们奋斗的动力。</p>
-            </div>
-        </div>
-        <div class="col-md-6 text-center">
-          <div class="row">
-             <div class="notification">
-                <h4>最新文章</h4>
-                <ul>
-                    <li>
-                      <div class="row">
-                        <div class="col-md-2">
-                            <img src="../static/images/blog-user.png">
-                        </div>
-                        <div class="col-md-10">
-                            <span class="name">
-                              <a href="javascript:;"><strong>Javascript真伪值整理</strong></a>
-                              <br/>
-                              <label style="font-size: 9px;">JavaScript的真伪值判断，没有规律。只能死记硬背。 而且第三方工具库的判断和语言本身也有区别。 作为笔记，比较语言本身和underscore库的区别。</label>
-                            </span>
-                            <p style="font-size: 10px; line-height: 20px;margin-bottom: 3px;">
-                              <span><img src="../static/images/createdAt.png" alt="">&nbsp;&nbsp;匿名</span>
-                              <span><img src="../static/images/date.png" alt="">&nbsp;&nbsp;2017年3月03日</span>
-                              <span><img src="../static/images/views.png" alt="">&nbsp;&nbsp;100</span>
-                              <span><img src="../static/images/comment.png" alt="">&nbsp;&nbsp;10</span>
-                            </p>
-                          </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="row">
-                        <div class="col-md-2">
-                            <img src="../static/images/blog-user.png">
-                        </div>
-                        <div class="col-md-10">
-                            <span class="name">
-                              <a href="javascript:;"><strong>Restapi架构中error体系设计</strong></a>
-                              <br/>
-                              <label style="font-size: 9px;">现在RestAPI盛行，我们在设计以提供RestAPI为主的架构中，除了API的URL设计，规范，返回结果格式等以外。 异常/错误体系的设计也很重要。</label>
-                            </span>
-                            <p style="font-size: 10px; line-height: 20px;margin-bottom: 3px;">
-                              <span><img src="../static/images/createdAt.png" alt="">&nbsp;&nbsp;匿名</span>
-                              <span><img src="../static/images/date.png" alt="">&nbsp;&nbsp;2017年3月03日</span>
-                              <span><img src="../static/images/views.png" alt="">&nbsp;&nbsp;200</span>
-                              <span><img src="../static/images/comment.png" alt="">&nbsp;&nbsp;8</span>
-                            </p>
-                          </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="row">
-                        <div class="col-md-2">
-                            <img src="../static/images/blog-user.png">
-                        </div>
-                        <div class="col-md-10">
-                            <span class="name">
-                              <a href="javascript:;"><strong>浏览器技术</strong></a>
-                              <br/>
-                              <label style="font-size: 9px;">现在RestAPI盛行，我们在设计以提供RestAPI为主的架构中，除了API的URL设计，规范，返回结果格式等以外。 异常/错误体系的设计也很重要。</label>
-                            </span>
-                            <p style="font-size: 10px; line-height: 20px;margin-bottom: 3px;">
-                              <span><img src="../static/images/createdAt.png" alt="">&nbsp;&nbsp;匿名</span>
-                              <span><img src="../static/images/date.png" alt="">&nbsp;&nbsp;2016年09月08日</span>
-                              <span><img src="../static/images/views.png" alt="">&nbsp;&nbsp;80</span>
-                              <span><img src="../static/images/comment.png" alt="">&nbsp;&nbsp;5</span>
-                            </p>
-                          </div>
-                      </div>
-                    </li>
-                </ul>
+            <div class="panel-body">
+              <ul class="recent-posts">
+                  {% for post in site.posts offset: 0 limit: 5  %}
+                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                  {% endfor %}
+              </ul>
             </div>
           </div>
-        </div>
-        <div class="col-md-3 text-center">
-          <div class="row count">
-              <img src="../static/images/blog.png" alt="">
-              <h2>10<small>-文章数</small></h2>
-              <p>分享业务动态，分享自己的体会</p>
+          <div class="panel panel-default">
+            <div class="panel-heading title">
+                最新评论
+            </div>
+            <div class="panel-body" style="padding: 0px 5px 0px 5px;">
+              <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="0" data-excerpt-length="18"></ul>
+            </div>
           </div>
-          <div class="row count">
-              <img src="../static/images/guest.png" alt="">
-              <h2>100<small>-访客数</small></h2>
-              <p>欢迎光临，谢谢您的宝贵建议。</p>
+          <div class="panel panel-default tags">
+            <div class="panel-heading title">
+                最新访客
+            </div>
+            <div class="panel-body">
+              <ul class="ds-recent-visitors" data-num-items="5" data-avatar-size="40"></ul>
+            </div>
+          </div>
+          <div class="panel panel-default tags">
+            <div class="panel-heading title">
+                标签云
+            </div>
+            <div class="panel-body">
+                <p class="tags">
+                  {% for tag in site.tags %}
+                  <a href="#" class="label-item" target="_blank">{{ tag.first }}</a>
+                  {% endfor %}
+                </p>
+            </div>
           </div>
       </div>
-    </div>
-</section>
-<section class="container team-work">
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <div class="navy-line"></div>
-      <h1>团队活动</h1>
-      <p>能干活，能玩耍。快乐工作，享受生活.</p>
     </div>
   </div>
-  <div class="row">
-    <div class="superbox col-sm-12">
-      <div class="superbox-list">
-        <img src="../static/images/1.jpg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/2.jpg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/3.jpg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/4.jpg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/5.jpg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/6.jpeg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/7.jpg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/8.jpg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/9.jpeg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-list">
-        <img src="../static/images/10.jpg" alt="团队活动" title="团队活动" class="superbox-img">
-      </div>
-      <div class="superbox-float"></div>
-	  </div>
-  </div>
-</section>
-<section class="team">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>我们的团队</h1>
-                <p>团队的每个人能够在专业领域有所成就,打造一款真真切切给人们带来方便,好用的产品.并为之努力奋斗.</p>
-            </div>
-        </div>
-        <div class="row">
-						<div class="col-md-3 col-sm-3">
-							<div class="personal">
-                <img src="../static/images/person01.png">
-                <div class="comment">
-                  <p>多年产品开发经验.精通Java，PHP，JavaScript等多门开发语言。梦想成为一个nb的开发者。</p>
-                </div>                           
-								<hr>
-                <h4>王某某</h4>  
-                <div class="row">
-                  <a href="#"><img src="../static/images/weibo.png"></a>
-                  <a href="#"><img src="../static/images/wechat.png"></a>
-                  <a href="#"><img src="../static/images/GitHub.png"></a>
-                </div> 
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-3">
-							<div class="personal">
-                <img src="../static/images/person02.png">                             
-								<div class="comment">
-                  <p>前端开发，了解各种主流技术，新技术的尝鲜者和推广者。热衷生活，热衷开发。</p>
-                </div>   
-                <hr>
-                <h4>杨某某</h4>  
-                <div class="row">
-                  <a href="#"><img src="../static/images/weibo.png"></a>
-                  <a href="#"><img src="../static/images/wechat.png"></a>
-                  <a href="#"><img src="../static/images/GitHub.png"></a>
-                </div> 
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-3">
-							<div class="personal">
-                <img src="../static/images/person03.png">                             
-                <div class="comment">
-                  <p>多年iOS开发经验，精通OC,Swift语言。精通多种第三方库，并且维护多个开源项目。</p>
-                </div>   
-								<hr>
-                <h4>李某某</h4>  
-                <div class="row">
-                  <a href="#"><img src="../static/images/weibo.png"></a>
-                  <a href="#"><img src="../static/images/wechat.png"></a>
-                  <a href="#"><img src="../static/images/GitHub.png"></a>
-                </div> 
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-3">
-							<div class="personal">
-                <img src="../static/images/person04.png">                             
-                <div class="comment">
-                  <p>设计师，善于发现生活的美，兴趣摄影，绘画。正在迈向艺术人生的道路上。</p>
-                </div>   
-								<hr>
-                <h4>王某某</h4>  
-                <div class="row">
-                  <a href="#"><img src="../static/images/weibo.png"></a>
-                  <a href="#"><img src="../static/images/wechat.png"></a>
-                  <a href="#"><img src="../static/images/GitHub.png"></a>
-                </div> 
-							</div>
-					</div>
-    </div>
-</section>
+</div>
+

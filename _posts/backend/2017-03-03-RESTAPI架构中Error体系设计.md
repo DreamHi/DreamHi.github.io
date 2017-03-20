@@ -1,8 +1,8 @@
 ---
 layout: post
-comments: RestAPI架构中Error体系设计
-categories: backend
+categories: 后端
 catalog: true
+original: true
 tags: REST API Error
 ---
 现在RestAPI盛行，我们在设计以提供RestAPI为主的架构中，除了API的URL设计，规范，返回结果格式等以外。

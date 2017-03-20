@@ -6,14 +6,14 @@ layout: default
 <!-- Post Content -->
 <article>
   <div class="container">
-		<div class="row">
-			<header>
-				<h2>{{ page.title }}</h2>
-				<p>{{ page.date | date: "%Y年%-m月%d日" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-			</header>
-		</div>
     <div class="row">
-        <div class="col-lg-8 col-md-8">
+        <header>
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.date | date: "%Y年%-m月%d日" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        </header>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-md-8" style="margin-bottom: 20px;">
             <section class="markdown-body">
                 {{ content }}
             </section>
@@ -23,12 +23,13 @@ layout: default
                 {% if page.next %}
                 <a href="{{ page.next.url }}" class="pull-right">下一篇 &rarr;</a> {% endif %}
             </footer>
-
-					<!-- 多说评论框 start -->
-					<div id="comments">
-						<div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
-					</div>
-					<!-- 多说评论框 end -->
+            <!--<ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="0" data-excerpt-length="18"></ul>
+            <ul class="ds-recent-visitors" data-num-items="5" data-avatar-size="40"></ul>
+             多说评论框 start -->
+            <div id="comments">
+                <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+            </div>
+            <!-- 多说评论框 end -->
         </div>
         <div class="col-lg-4  col-md-4">
 					{% if page.catalog %}

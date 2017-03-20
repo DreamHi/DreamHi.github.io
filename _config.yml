@@ -30,8 +30,8 @@ kramdown:
 gems: [jekyll-paginate]
 
 excerpt : teaser
-paginate : 10
-paginate_path : "/views/blog/page:num/"
+paginate : 5
+paginate_path : "page:num"
 
 comments :
   provider : duoshuo

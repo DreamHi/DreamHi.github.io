@@ -3,14 +3,41 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav justify-content-center">
-        <li><a href="#">前台</a></li>
-        <li><a href="#">后台</a></li>
+        {% for category in site.categories %}
+        <li>
+            <a href="#" data-target-cate="#{{category.first}}">
+                {{ category.first }}&nbsp;<span class="count">[{{ category.last.size }}]</span>
+            </a>
+        </li>
+        {% endfor %}
         <li><a href="#">iOS</a></li>
         <li><a href="#">Android</a></li>
-        <li><a href="#">UI</a></li>
+        <li><a href="#">设计</a></li>
         <li><a href="#">测试</a></li>
         <li><a href="#">运维</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+          <!--<div class="panel panel-default categories">
+              <div class="panel-heading title">
+                  文章分类
+              </div>
+              <div class="panel-body list">
+                  <ul>
+                    <li>
+                        <a class="catelink" href="{{site.baseurl}}/category/#all" data-target-cate="#all">
+                            所有分类&nbsp;<span class="count">[{{ site.posts.size }}]</span>
+                        </a>
+                    </li>
+                    {% for category in site.categories %}
+                    <li>
+                        <a class="catelink" href="#" data-target-cate="#{{category.first}}">
+                            {{ category.first }}&nbsp;<span class="count">[{{ category.last.size }}]</span>
+                        </a>
+                    </li>
+
+                    {% endfor %}
+                  </ul>
+              </div>
+          </div>-->

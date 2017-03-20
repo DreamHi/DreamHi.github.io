@@ -1,8 +1,8 @@
 ---
 layout: post
-comments: jQuery Plugin 开发
-categories: javascript
+categories: 前端
 catalog: true
+original: true
 tags: JavaScript JQuery 插件
 ---
 
