@@ -7,14 +7,25 @@ layout: default
 <article>
   <div class="container">
     <div class="row">
-        <header>
-            <h2>{{ page.title }}</h2>
-            <p>{{ page.date | date: "%Y年%-m月%d日" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-        </header>
-    </div>
-    <div class="row">
         <div class="col-lg-8 col-md-8" style="margin-bottom: 20px;">
-            <section class="markdown-body">
+            <header>
+                <h3>
+                    {% if page.original %}
+                    <span class="post-original">原</span>
+                    {% else %}
+                    <span class="post-recommend">转</span>
+                    {% endif %}
+                    <a style="color:black" href="{{ post.url }}">{{ page.title }}</a>
+                </h3>
+                <p class="info">
+                    <span><img src="/static/images/createdAt.png" alt="">&nbsp;&nbsp;{{ page.auth | default: "匿名" }}</span>
+                    <span><img src="/static/images/date.png" alt="">&nbsp;&nbsp;{{page.date | date: "%Y年%-m月%d日"}}</span>
+                    <span><img src="/static/images/views.png" alt="">&nbsp;&nbsp;<i id="totalWords">0</i>字</span>
+                    <span><img src="/static/images/views.png" alt="">&nbsp;&nbsp;<i id="totalViews">0</i></span>
+                    <span><img src="/static/images/comment.png" alt="">&nbsp;&nbsp;<i id="totalComments">0</i></span>
+                </p>
+            </header>
+            <section class="markdown-body" style="margin-top: 15px;">
                 {{ content }}
             </section>
             <footer style="margin-top: 20px;">
@@ -31,18 +42,18 @@ layout: default
             </div>
             <!-- 多说评论框 end -->
         </div>
-        <div class="col-lg-4  col-md-4">
-					{% if page.catalog %}
-					<div class="side-catalog fixed">
-						<ul class="catalog-body"></ul>
-					</div>
-					<script src="/static/js/toc.js"></script>
-					<script type="text/javascript">
-              $(document).ready(function() {
-                  $(".catalog-body").toc();
-              });
-					</script>
-					{% endif %}
+        <div class="col-lg-4  col-md-4" style="margin-top: 20px;">
+        {% if page.catalog %}
+        <div class="side-catalog fixed">
+            <ul class="catalog-body"></ul>
+        </div>
+        <script src="/static/js/toc.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".catalog-body").toc();
+            });
+        </script>
+        {% endif %}
         </div>
     </div>
   </div>
