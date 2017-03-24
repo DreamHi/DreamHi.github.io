@@ -25,12 +25,12 @@
 }
 
 .blog-wall .content {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .blog-wall .tags {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 
 .tags .label-item {
