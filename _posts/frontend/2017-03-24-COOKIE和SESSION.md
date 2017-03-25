@@ -13,7 +13,7 @@ HTTP协议是无状态的，服务器接受客户端的请求时并不知道这�
 cookie是保存在浏览器端的小型文本文件，内容为一系列键值对。Cookie的是http协议的一部分。
 具体规范定义在[RFC2109: HTTP State Management Mechanism](https://www.ietf.org/rfc/rfc2109.txt)中。
 
-Cookie工作原理:  
+#### Cookie工作原理  
 1.浏览器发送HTTP请求给服务器  
 2.服务器端生成Cookie值，在HTTP响应头中加入该值。Set-Cookie: cookie值  
 3.浏览器收到HTTP响应，解析Cookie值，保存在浏览器端。不同域名的Cookie保存的路径不同。  
@@ -22,7 +22,7 @@ Cookie工作原理:
 
 ![Cookie工作原理](/static/images/frontend/cookie.png)
 
-Cookie存储：内存存储和硬盘存储
+#### Cookie存储：内存存储和硬盘存储
 内存Cookie由浏览器维护，保存在内存中，浏览器关闭后就消失了。
 硬盘Cookie保存在硬盘里，有一个过期时间，除非用户手工清理或到了过期时间，硬盘Cookie不会被删除。
 
@@ -35,7 +35,7 @@ Cookie存储：内存存储和硬盘存储
 ### session
 为了改善cookie存在的缺陷。有了session。和cookie不同。session保存在服务器端。这样用户的敏感数据可以保存在服务器端。
 
-Session工作原理：  
+#### Session工作原理  
 1.浏览器发送HTTP请求给服务器  
 2.服务器保存当前用户状态信息保存在文件或者数据库中，生成一个唯一ID，加入HTTP响应中，sessionId: 唯一ID  
 3.浏览器收到HTTP响应，把该值保存在Cookie中。  
