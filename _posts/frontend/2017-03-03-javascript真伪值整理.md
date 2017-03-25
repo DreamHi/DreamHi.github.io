@@ -7,11 +7,10 @@ original: true
 tags: JavaScript
 ---
 
-JavaScript的真伪值判断，没有规律。只能死记硬背。
-而且第三方工具库的判断和语言本身也有区别。
-作为笔记，比较语言本身和underscore库的区别。
+JavaScript中的真伪值和别的高级语言不一样，不是特别规范，有几个特殊的情况。
+目前流行的第三方工具库中，对真伪值得判断也不统一，甚至和语言规范中定义的也不同。
 
-## JavaScript 真伪值
+## JavaScript中的真伪值
 
 |值|类型|结果|
 |--------|------|------|
@@ -28,9 +27,10 @@ JavaScript的真伪值判断，没有规律。只能死记硬背。
 |null	|null|	false|
 
 ### underscore1.8.3的判定方法
+
 ```js
 _.isEmpty({})   // true
-_.isEmpty(hoge) // false
+_.isEmpty("hoge") // false
 _.isEmpty("") // true
 _.isEmpty(1) // true
 _.isEmpty(-1) // true
@@ -40,7 +40,19 @@ _.isEmpty(true) // true
 _.isEmpty(false) // true
 _.isEmpty(undefined) // true
 _.isEmpty(null) // true
-
 ```
 
-### lodash
+### lodash  4.17.4
+```js
+_.isEmpty({})   // true
+_.isEmpty("hoge") // false
+_.isEmpty("") // true
+_.isEmpty(1) // true
+_.isEmpty(-1) // true
+_.isEmpty(0) // true
+_.isEmpty([]) // true
+_.isEmpty(true) // true
+_.isEmpty(false) // true
+_.isEmpty(undefined) // true
+_.isEmpty(null) // true
+```

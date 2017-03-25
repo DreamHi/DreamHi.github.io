@@ -3,11 +3,11 @@ layout: post
 categories: 前端
 catalog: true
 original: true
-tags: JavaScript JQuery 插件
+tags: JavaScript jQuery 插件
 ---
 
 开发插件的目的是为了功能或者代码复用。一个或多个功能封装成插件。
-jquery插件类似jquery对象的一个方法。所有的juqery对象都可以使用
+jQuery插件类似jQuery对象的一个方法。所有的juqery对象都可以使用
 
 ## 常见插件用法(自命名)
 
@@ -40,13 +40,11 @@ $.pluginName("Object");
 * 通过$.fn 向jQuery添加新的方法
 * 通过$.widget()应用jQuery UI的部件工厂方式创建
 
-### 例子
+#### 例子
 
 ```js
 (function ( $ ) {
-
     $.fn.greenify = function( options ) {
-
         // This is the easiest way to have default options.
         var settings = $.extend({
             // These are the defaults.
@@ -61,50 +59,26 @@ $.pluginName("Object");
         });
 
         return this；
-
-        // return this.each(function() {
-        //   // 处理每个对象
-        //   var ele = $(this)
-        //   ele.greenify();
-        // });
-
     };
-
 }( jQuery ));
 ```
 
-* 几个概念
+#### 几个概念
 
   $: jQuery别名
-
   fn：jQuery的prototype对象的别名. $.fn(jQuery.prototype)
-
   this: 插件内部this = $, 插件函数内this = dom元素。
-
-  chaining: "return this"为了jquery对象的链接操作。$( "a" ).greenify().addClass( "greenified" );
-
+  chaining: "return this"为了jQuery对象的链接操作。$( "a" ).greenify().addClass( "greenified" );
   保护别名：为了能在插件内部使用$,插件结构 (function($){...}(jQuery))
-
   $.extend: 扩展对象的方法. $.extend(boolean,dest,src1,src2,src3...)
-
-  this.each: 如果多个jQuery对象时，需要处理每个对象
-
-### 高级特性
-
-* 插件的私有函数
-* 插件的扩展接口
-* 数据
 
 ### 开发插件需要准备什么
 
 * 插件名
-* 插件功能
+* 插件功能整理
 * 默认属性
 * 自定义属性
 * 插件的扩展接口
-
-### 最佳实践
-
 
 ### 开发模板（面向对象的插件开发）
 
@@ -116,7 +90,6 @@ $.pluginName("Object");
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
-
 
 +function ($) {
   'use strict';
@@ -205,6 +178,3 @@ $.pluginName("Object");
 }(jQuery);
 
 ```
-### 实战
-
-* 需求
