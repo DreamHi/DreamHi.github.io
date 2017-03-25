@@ -45,7 +45,8 @@ title: {{ site.description }}
           <p class="info">
             <span><img src="../static/images/createdAt.png" alt="">&nbsp;&nbsp;{{ post.auth | default: "匿名" }}</span>
             <span><img src="../static/images/date.png" alt="">&nbsp;&nbsp;{{post.date | date: "%Y年%-m月%d日"}}</span>
-            <span><img src="../static/images/words.png" alt="">&nbsp;&nbsp;{{post.content | number_of_words }}字</span>
+            <span><img src="../static/images/words.png" alt="">&nbsp;&nbsp;{{post.content | strip_html | strip_newlines | size  }}字</span>
+            <span><img src="../static/images/time.png" alt="">&nbsp;&nbsp;{{post.content | strip_html | strip_newlines | size | divided_by:350 | round  }}分钟</span>
          </p>
           <span class="content"> 
             {{ post.excerpt | truncate: 150}} 
