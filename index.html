@@ -60,15 +60,32 @@ title: {{ site.description }}
         </div>
         {% endfor %}
         <!-- Pagination links -->
-        <nav aria-label="..."> 
-          <ul class="pager"> 
-           {% if paginator.previous_page %}
-            <li><a href="{{ paginator.previous_page_path }}" class="previous">前一页</a></li>
+        <nav aria-label="...">
+          {% if paginator.total_pages > 1 %}
+          <div class="pager">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}">&laquo; 前一页</a>
+            {% else %}
+            <span>&laquo; 前一页</span>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <em>{{ page }}</em>
+            {% elsif page == 1 %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            {% else %}
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}">下一页 &raquo;</a>
+            {% else %}
+            <span>下一页 &raquo;</span>
+            {% endif %}
+          </div>
           {% endif %}
-          {% if paginator.next_page %}
-            <li><a href="{{ paginator.next_page_path }}" class="next">下一页</a></li>
-          {% endif %}
-          </ul> 
         </nav>
       </div>
       <div class="col-lg-3 col-md-3" style="margin-top: 15px;">
