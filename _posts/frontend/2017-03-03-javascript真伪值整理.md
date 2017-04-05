@@ -1,6 +1,6 @@
 ---
 layout: post
-comments: JavaScript 真伪值整理
+title: JavaScript真伪值整理
 categories: 前端
 catalog: true
 original: true
