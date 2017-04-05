@@ -1,5 +1,6 @@
 ---
 layout: post
+title: jQueryPlugin开发
 categories: 前端
 catalog: true
 original: true

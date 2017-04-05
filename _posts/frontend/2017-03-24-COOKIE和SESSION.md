@@ -1,5 +1,6 @@
 ---
 layout: post
+title: COOKIE和SESSION
 categories: 前端
 catalog: true
 original: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-comments: JavaScript 继承
+title: JavaScript继承
 categories: 前端
 catalog: true
 original: true
