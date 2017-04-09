@@ -1,7 +1,7 @@
 ---
 layout: post
 title: COOKIE和SESSION
-categories: 前端
+categories: frontend
 catalog: true
 original: true
 tags: Cookie Session

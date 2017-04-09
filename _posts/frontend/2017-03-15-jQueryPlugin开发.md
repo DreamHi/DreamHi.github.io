@@ -1,7 +1,7 @@
 ---
 layout: post
 title: jQueryPlugin开发
-categories: 前端
+categories: frontend
 catalog: true
 original: true
 tags: JavaScript jQuery 插件

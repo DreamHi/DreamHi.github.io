@@ -2,42 +2,17 @@
   <div class="container-fluid">
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
       <ul class="nav navbar-nav justify-content-center">
-        {% for category in site.categories %}
-        <li>
-            <a href="#" data-target-cate="#{{category.first}}">
-                {{ category.first }}&nbsp;<span class="count">[{{ category.last.size }}]</span>
-            </a>
-        </li>
-        {% endfor %}
-        <li><a href="#">iOS</a></li>
-        <li><a href="#">Android</a></li>
-        <li><a href="#">设计</a></li>
-        <!--<li><a href="#">测试</a></li>-->
-        <li><a href="#">运维</a></li>
+        <li><a href="/views/category/frontend.html">前端[{{ site.categories.frontend | size }}]</a></li>
+        <li><a href="/views/category/backend.html">后端[{{ site.categories.backend | size }}]</a></li>
+        <li><a href="/views/category/ios.html">iOS[{{ site.categories.ios | size }}]</a></li>
+        <li><a href="/views/category/android.html">Android[{{ site.categories.android | size }}]</a></li>
+        <li><a href="/views/category/uiux.html">设计[{{ site.categories.uiux | size }}]</a></li>
+        <li><a href="/views/category/test.html">测试[{{ site.categories.test | size }}]</a></li>
+        <li><a href="/views/category/operation.html">运维[{{ site.categories.operation | size }}]</a></li>
+        <li><a href="/views/category/others.html">其他[{{ site.categories.others | size }}]</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-          <!--<div class="panel panel-default categories">
-              <div class="panel-heading title">
-                  文章分类
-              </div>
-              <div class="panel-body list">
-                  <ul>
-                    <li>
-                        <a class="catelink" href="{{site.baseurl}}/category/#all" data-target-cate="#all">
-                            所有分类&nbsp;<span class="count">[{{ site.posts.size }}]</span>
-                        </a>
-                    </li>
-                    {% for category in site.categories %}
-                    <li>
-                        <a class="catelink" href="#" data-target-cate="#{{category.first}}">
-                            {{ category.first }}&nbsp;<span class="count">[{{ category.last.size }}]</span>
-                        </a>
-                    </li>
-
-                    {% endfor %}
-                  </ul>
-              </div>
-          </div>-->

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript继承
-categories: 前端
+categories: frontend
 catalog: true
 original: true
 tags: JavaScript

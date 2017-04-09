@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RESTAPI架构中Error体系设计
-categories: 后端
+categories: backend
 catalog: true
 original: true
 tags: REST API Error

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript真伪值整理
-categories: 前端
+categories: frontend
 catalog: true
 original: true
 tags: JavaScript

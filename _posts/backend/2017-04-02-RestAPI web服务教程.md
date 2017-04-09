@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RestAPI web服务教程
-categories: 后端
+categories: backend
 catalog: true
 original: false
 tags: RestAPI
