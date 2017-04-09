@@ -40,7 +40,7 @@ title: {{ site.description }}
             {% else %}
             <span class="post-recommend">转</span>
             {% endif %}
-            <a style="color:black" href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ post.title }}</a>
           </h3>
           <p class="info">
             <span><img src="../static/images/createdAt.png" alt="">&nbsp;&nbsp;{{ post.auth | default: "匿名" }}</span>
@@ -88,7 +88,7 @@ title: {{ site.description }}
           {% endif %}
         </nav>
       </div>
-      <div class="col-lg-3 col-md-3" style="margin-top: 15px;">
+      <div class="col-lg-3 col-md-3">
           <div class="panel panel-default">
             <div class="panel-heading title">
                 近期文章
