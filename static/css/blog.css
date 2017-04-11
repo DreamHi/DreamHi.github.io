@@ -145,7 +145,7 @@
   border-radius: 5px;
 }
 
-.pagination .page-numbers {
+.pager .page-numbers {
   padding: 8px 12px;
   border: 1px solid #F5F5F5;
   border-radius: 25px 25px 25px 25px;
@@ -154,11 +154,11 @@
   display: inline-block;
 }
 
-.pagination a {
+.pager a {
   color: #555;
   text-decoration: none;
 }
 
-.pagination .current {
+.pager .current {
   background-color: #F5F5F5;
 }
