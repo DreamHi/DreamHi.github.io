@@ -60,29 +60,29 @@ title: {{ site.description }}
         </div>
         {% endfor %}
         <!-- Pagination links -->
-        <nav aria-label="...">
+        <nav aria-label="..." style="text-align: center;">
           {% if paginator.total_pages > 1 %}
-          <div class="pager">
+          <div class="pagination">
             {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}">&laquo; 前一页</a>
+            <a class="page-numbers" href="{{ paginator.previous_page_path }}">前一页</a>
             {% else %}
-            <span>&laquo; 前一页</span>
+            <span class="page-numbers">前一页</span>
             {% endif %}
 
             {% for page in (1..paginator.total_pages) %}
             {% if page == paginator.page %}
-            <em>{{ page }}</em>
+            <em class="page-numbers current">{{ page }}</em>
             {% elsif page == 1 %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            <a class="page-numbers" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
             {% else %}
-            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            <a class="page-numbers" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
             {% endif %}
             {% endfor %}
 
             {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}">下一页 &raquo;</a>
+            <a class="page-numbers" href="{{ paginator.next_page_path }}">下一页</a>
             {% else %}
-            <span>下一页 &raquo;</span>
+            <span class="page-numbers">下一页</span>
             {% endif %}
           </div>
           {% endif %}

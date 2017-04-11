@@ -144,3 +144,21 @@
   color: #999;
   border-radius: 5px;
 }
+
+.pagination .page-numbers {
+  padding: 8px 12px;
+  border: 1px solid #F5F5F5;
+  border-radius: 25px 25px 25px 25px;
+  padding: 8px 14px;
+  margin: 0 5px 0 0;
+  display: inline-block;
+}
+
+.pagination a {
+  color: #555;
+  text-decoration: none;
+}
+
+.pagination .current {
+  background-color: #F5F5F5;
+}
