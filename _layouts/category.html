@@ -4,13 +4,13 @@ layout: default
 
 <section>
 	<div class="container-fluid">
-		<div class="row">
+		<div>
 			<h3 style="text-align: center;">{{ page.title }}</h3>
 			<hr>
-			<div class="col-lg-9 col-md-9">
+			<div>
 				{% assign posts = site.categories[page.category] %}
 				{% for post in posts %}
-				<div class="blog-wall container">
+				<div class="blog-wall container" style="width: 60%">
 					<h3>
 						{% if post.original %}
 						<span class="post-original">原</span>

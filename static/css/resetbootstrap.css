@@ -28,6 +28,9 @@ p {
 
 .panel-default {
   border-color: #fff;
+  background: #f9f9f9;
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 
 
