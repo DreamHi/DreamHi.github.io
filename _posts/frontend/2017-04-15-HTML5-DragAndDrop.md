@@ -101,7 +101,7 @@ ondragover 事件规定在何处放置被拖动的数据。
 </html>
 ```
 
-### 第三方插件
+### 第三方库
 * [dragula](https://bevacqua.github.io/dragula/)
 * [Sortable](http://rubaxa.github.io/Sortable/)
 * [Drag and Drop for React](http://react-dnd.github.io/react-dnd/)
