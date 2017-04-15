@@ -8,6 +8,15 @@ body {
   padding-top: 57px;
 }
 
+.header-active {
+  border-bottom: 4px solid #9b4dca;
+}
+
+.navbar-default .navbar-nav .header-active >a {
+  color: #9b4dca;
+  background: white;
+}
+
 .color-primary {
   color:#9b4dca
 }

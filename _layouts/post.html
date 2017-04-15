@@ -50,6 +50,10 @@ layout: default
         <script type="text/javascript">
             $(document).ready(function() {
                 $(".catalog-body").toc();
+
+                $("#headerNav").on("click", "a", function(e) {
+                  console.log($(e.target));
+                })
             });
         </script>
         {% endif %}
