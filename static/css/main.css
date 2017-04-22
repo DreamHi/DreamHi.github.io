@@ -5,7 +5,7 @@ body {
   line-height: 1.8;
   color: #615b5b;
   background: #fff;
-  padding-top: 57px;
+  padding-top: 56px;
 }
 
 .header-active {
@@ -56,8 +56,8 @@ body {
 }
 
 .bs-docs-footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 48px;
+  padding-bottom: 48px;
   color: #99979c;
   text-align: center;
   background-color: #2a2730;
@@ -65,7 +65,7 @@ body {
 
 .bs-docs-footer-links {
   padding-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .bs-docs-footer-links li {

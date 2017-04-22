@@ -1,13 +1,13 @@
 .blog-wall {
   width: 100%;
   border-bottom: solid 1px #e9e9e9;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-top: 8px;
 }
 
 .blog-wall h3 {
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin-top: 8px;
+  margin-bottom: 4px;
   font-size: 22px;
 }
 
@@ -22,12 +22,12 @@
 
 .info {
   font-size: 10px;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin-bottom: 4px;
+  margin-top: 8px;
 }
 
 .info span {
-  padding-right: 20px;
+  padding-right: 16px;
   color: #999
 }
 
@@ -41,7 +41,7 @@
 }
 
 .blog-wall .tags {
-  margin: 10px 10px 0px 10px;
+  margin: 8px 8px 0px 8px;
 }
 
 .tags .label-item {
@@ -51,12 +51,12 @@
   padding: 0px 5px 0px 5px;
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 15px;
+  border-radius: 16px;
   margin-right: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   color: #ccc;
   font-size: 8px;
-  height: 22px;
+  height: 24px;
   text-decoration: none;
 }
 
@@ -78,19 +78,19 @@
 
 .side-catalog ol {
   list-style: none;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 .side-catalog .catalog-body i {
   font-style: normal;
 }
 .side-catalog .catalog-body li a {
-  padding-left: 10px;
+  padding-left: 8px;
   max-width: 180px;
   display: inline-block;
   vertical-align: middle;
-  height: 30px;
-  line-height: 30px;
+  height: 32px;
+  line-height: 32px;
   overflow: hidden;
   text-decoration: none;
   white-space: nowrap;
@@ -111,13 +111,13 @@
   height: auto;
   overflow: hidden;
   padding-left: 0;
-  padding-right: 5px;
+  padding-right: 4px;
   text-indent: 0;
 }
 
 .recent-posts {
   margin: 0px;
-  padding-left: 15px;
+  padding-left: 16px;
 }
 
 .ds-recent-comments {
@@ -134,7 +134,7 @@
   font-size: 14px;
   border: 1px solid #9b4dca;
   color: #9b4dca;
-  border-radius: 5px;
+  border-radius: 4px;
   vertical-align: middle;
   position: relative;
   top: -2px;
@@ -143,14 +143,13 @@
   font-size: 16px;
   border: 1px solid #999;
   color: #999;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .pager .page-numbers {
-  padding: 8px 12px;
   border: 1px solid #F5F5F5;
-  border-radius: 25px 25px 25px 25px;
-  padding: 8px 14px;
+  border-radius: 24px 24px 24px 24px;
+  padding: 8px 16px;
   margin: 0 5px 0 0;
   display: inline-block;
 }
