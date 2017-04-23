@@ -24,11 +24,11 @@ p {
 .panel {
   -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.05);
   box-shadow: 0 2px 2px rgba(0,0,0,.05);
+  border: 0px;
 }
 
 .panel-default {
   border-color: #fff;
-  background: #f9f9f9;
   margin-top: 16px;
   margin-bottom: 0px;
 }
