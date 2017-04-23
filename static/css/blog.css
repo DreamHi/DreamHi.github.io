@@ -1,8 +1,8 @@
 .blog-wall {
   width: 100%;
   border-bottom: solid 1px #e9e9e9;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
 .blog-wall h3 {
