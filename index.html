@@ -72,6 +72,8 @@ title: Home
             {% for page in (1..paginator.total_pages) %}
             {% if page == paginator.page %}
             <em class="page-numbers current">{{ page }}</em>
+            {% elsif page == 1 %}
+            <a class="page-numbers" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
             {% else %}
             <a class="page-numbers" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
             {% endif %}
