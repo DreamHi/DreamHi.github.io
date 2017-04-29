@@ -27,7 +27,9 @@ kramdown:
   syntax_highlighter_opts:
     coderay_line_numbers:  nil
 
-gems: [jekyll-paginate]
+gems: 
+  - jekyll-paginate
+  - jekyll-seo-tag
 
 excerpt : teaser
 paginate : 5
