@@ -5,3 +5,4 @@ node_modules
 _drafts
 .idea
 .idea/vcs.xml
+.vscode*
