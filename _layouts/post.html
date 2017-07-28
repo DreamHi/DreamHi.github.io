@@ -36,10 +36,11 @@ layout: default
             <!--<ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="0" data-excerpt-length="18"></ul>
             <ul class="ds-recent-visitors" data-num-items="5" data-avatar-size="40"></ul>
              多说评论框 start -->
-            <div id="comments">
+            <!-- <div id="comments">
                 <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
-            </div>
+            </div> -->
             <!-- 多说评论框 end -->
+            <div id="uyan_frame"></div>
         </div>
         <div class="col-lg-4  col-md-4" style="margin-top: 20px;">
         {% if page.catalog %}
