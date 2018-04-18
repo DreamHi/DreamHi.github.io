@@ -1,8 +1,8 @@
 # Site settings
-title: 梦创技术团队
-SEOTitle: "梦创 技术 团队 梦创技术团队"
+title: HiDream技术团队
+SEOTitle: "HiDream 技术 团队 HiDream技术团队"
 email: hidream_tech@163.com
-description: "打造nb的团队,nb的产品"
+description: "热爱生活 热爱产品"
 keyword: "前端 后端 ios iOS Android android 测试 运维 产品"
 baseurl: "/"
 url: "www.hidream.tech"
@@ -27,7 +27,7 @@ kramdown:
   syntax_highlighter_opts:
     coderay_line_numbers:  nil
 
-gems: 
+plugins: 
   - jekyll-paginate
   - jekyll-seo-tag
 

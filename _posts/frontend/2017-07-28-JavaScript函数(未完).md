@@ -6,7 +6,7 @@ catalog: true
 original: true
 ---
 
-函数的概念在JavaScript中非常重要,是第一型对象(first-class object)。函数可以被声明，引用，也可以当作参数传递，还能被调用。
+函数的概念在JavaScript中非常重要,是第一型对象(first-class object)。函数可以被声明，引用，也可以当作参数传递，还能被调用。
 
 函数是第一型对象的功能：
 * 它们可以通过字面量进行创建

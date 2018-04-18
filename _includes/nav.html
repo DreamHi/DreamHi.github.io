@@ -1,32 +1,74 @@
-<!-- Header -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">
-        <dl>
-          <dt>HiDream</dt>
-          <dd style="font-size: 8px;">----梦创技术团队</dd>
-        </dl>
-      </a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="headerNav">
-      <ul class="nav navbar-nav navbar-right">
-        <li {% if page.title == "Home" %}class="header-active" {% endif %}><a href="/">主页</a></li>
-        <li {% if page.title == "Product" %}class="header-active"{% endif %}><a href="/views/product.html">实验室</a></li>
-        <!--<li {% if page.title == "OpenSrc" %}class="header-active"{% endif %}><a href="/views/opensrc.html">开源项目</a></li>-->
-        <li {% if page.title == "Document" %}class="header-active"{% endif %}><a href="/views/document.html">团队文档</a></li>
-        <li {% if page.title == "Archives" %}class="header-active"{% endif %}><a href="/views/archives.html">归档</a></li>
-        <li {% if page.title == "About" %}class="header-active"{% endif %}><a href="/views/about.html">关于我们</a></li>
-        <li><a href="/feed.xml">订阅</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+<nav class="navbar navbar-expand-lg c-navbar">
+  <a class="c-brand" href="/">
+    <dl>
+      <dt>HiDream</dt>
+      <dd style="font-size: 8px;">----技术团队</dd>
+    </dl>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li {% if page.title == "Product" %}class="nav-item header-active" {%else%} class="nav-item"{% endif %}>
+        <a class="nav-link" href="/">主页</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/views/blog.html">博客</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/views/product.html">实验室</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/views/opensrc.html">开源项目</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/views/document.html">文档</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/views/document.html">推荐书</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/views/about.html">关于</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/views/archives.html">归档</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/feed.xml">订阅</a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class=""></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img class="d-block w-100"  alt="First slide [800x400]" src="/static/images/bg-2.jpg" data-holder-rendered="true">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>梦想</h5>
+        <p>一个方向，一个目标，一旦被付诸行动，就会变得神圣.</p>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <img class="d-block w-100"  alt="Second slide [800x400]" src="/static/images/bg-1.jpg" data-holder-rendered="true">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>激情</h5>
+        <p>一团熊熊的火焰，一切行动的原动力.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100"  alt="Third slide [800x400]" src="/static/images/bg-3.jpg" data-holder-rendered="true">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>分享</h5>
+        <p>一种信念，一种态度，是我们存在的意义.</p>
+      </div>
+    </div>
+  </div>
+</div>
