@@ -33,7 +33,7 @@ plugins:
 
 excerpt : teaser
 paginate : 5
-paginate_path : "/page:num/"
+paginate_path : "views/blog/page:num/"
 
 comments :
   provider : duoshuo
